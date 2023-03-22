@@ -1,3 +1,4 @@
 .imagen_fondo{
-    background-image:"/fotos/imginicio.png" !important;
+    background: url("/fotos/imginicio.png") no-repeat center center fixed;
+    background-size: cover;
 }
