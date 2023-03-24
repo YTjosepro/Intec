@@ -3,33 +3,42 @@
 <head>
     <meta charset='utf-8'>
     <title>Iniciar_sesion</title>
-    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src='main.js'></script>
 </head>
 <body>
-    <div class="container-fluid imagen_fondo">
-        <div class="row">
-            <div class="column">
-                <h1>Cualquiercosa</h1>
-            </div>
-        </div>
-    </div>
-
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
+        <div class="row" >
+            <div class="col-6">
+            <img style="width:700px; height: 625px;" src="../fotos/imginicio.png">
+            </div>
+            
+            <div class="col-6">
+                <center>
+                <div class="row">
+                    <div class="col">
+                        <img style="height: 200px; margin-bottom: 30px;" src="../fotos/logo.png">
+                    </div>
+                </div>
+                <h3>IntecSofware</h3>
+                <h7>Sofware de control tegnico<br>Administrativo</h7>
+                <form method="POST" action="index.php">
                 <tr>
-                    <h6>Usuario</h6>
+                    <h6 style="margin-top: 20px">Usuario</h6>
                     <input type="text" placeholder="name@domain.com">
                 </tr>
                 <tr>
-                    <h6>Contraseña</h6>
-                    <input type="text" placeholder="******">
+                    <h6 style="margin-top: 20px">Contraseña</h6>
+                    <input type="password" name="txtpass" placeholder="******">
                 </tr>
-            </div>            
-            <div>
 
+
+                <div class="col">
+                    <button type="submit" class="btn btn-info" style="margin-top:20px">tutoriales</button>
+                    <button type="submit" class="btn btn-info" style="margin-top:20px; margin-left:10px">Ingresar</button>
+                </div>
+                </form>
+                </center>
             </div>
         </div>
     </div>
