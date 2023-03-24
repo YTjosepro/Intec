@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -18,15 +19,16 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
-                <img src="../fotos/imginicio.png" class="img-fluid">
+                <img src="../fotos/imginicio.png" class="img-fluid" style="height:625px;">
             </div>
 
             <div class="col-md-6">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-12 col-md-8 col-lg-6">
-                        <img src="../fotos/logo.png" class="img-fluid mb-3">
+                        <center>                            
+                        <img src="../fotos/logo.png" class="img-fluid mb-3" style="margin-top:15px; height:225px;">
                         <h3>IntecSofware</h3>
-                        <h7>Software de control técnico administrativo</h7>
+                        <h7>Software de control técnico<br>Administrativo</h7>
                         <form method="POST" action="index.php">
                             <div class="form-group mt-4">
                                 <label for="usuario">Usuario</label>
@@ -42,6 +44,7 @@
                                 <button type="submit" class="btn btn-info">Ingresar</button>
                             </div>
                         </form>
+                        </center>
                     </div>
                 </div>
             </div>
