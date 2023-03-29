@@ -2,7 +2,6 @@
     include('conexion.php');
 
     if(isset($_POST['nombre'])){
-        echo $_POST;
         $CC_NIT= $_POST['CC_NIT'];
         $nombre = $_POST['nombre'];
         $direccion = $_POST['direccion'];
