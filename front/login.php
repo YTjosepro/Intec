@@ -1,3 +1,9 @@
+    <?php
+    session_start();
+    if(isset($usu)) {
+        header('Location: inicio.php');
+    }
+?>
 
 <!DOCTYPE html>
 <html>
@@ -18,32 +24,32 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6">
-                <img src="../fotos/imginicio.png" class="img-fluid" style="height:625px;">
+            <div class="col-md-8 col-sm-12">
+                <img src="../fotos/imginicio.png" class="img-fluid" style="width:900px; height:625px;">
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-4 col-sm-12">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-12 col-md-8 col-lg-6">
                         <center>                            
-                        <img src="../fotos/logo.png" class="img-fluid mb-3" style="margin-top:15px; height:225px;">
-                        <h3>IntecSofware</h3>
-                        <h7>Software de control técnico<br>Administrativo</h7>
-                        <form method="POST" action="index.php">
-                            <div class="form-group mt-4">
-                                <label for="usuario">Usuario</label>
-                                <input type="text" class="form-control" id="usuario" placeholder="name@domain.com">
-                            </div>
-                            <div class="form-group">
-                                <label for="contrasena">Contraseña</label>
-                                <input type="password" class="form-control" id="contrasena" name="txtpass"
+                            <img src="../fotos/logo.png" class="img-fluid mb-3" style="margin-top:15px; height:225px;">
+                            <h3>IntecSofware</h3>
+                            <h7>Software de control técnico<br>Administrativo</h7>
+                            <form method="POST" action="inicio.php">
+                                <div class="form-group mt-4">
+                                    <label for="usuario">Usuario</label>
+                                    <input type="text" class="form-control" id="usuario" placeholder="name@domain.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contrasena">Contraseña</label>
+                                    <input type="password" class="form-control" id="contrasena" name="txtpass"
                                     placeholder="******">
-                            </div>
-                            <div>
-                                <a href="tutoriales.php" class="btn btn-info mr-2">Tutoriales</a>
-                                <button type="submit" class="btn btn-info">Ingresar</button>
-                            </div>
-                        </form>
+                                </div>
+                                <div>
+                                    <a href="tutoriales.php" class="btn btn-info mr-2">Tutoriales</a>
+                                    <button type="submit" class="btn btn-info">Ingresar</button>
+                                </div>
+                            </form>
                         </center>
                     </div>
                 </div>

@@ -1,6 +1,6 @@
 <?php
 $contraseña = '';
-$usuario = 'root';
+$usuario = 'admin';
 $nombrebd = 'notas';
 
 try {
