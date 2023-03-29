@@ -10,7 +10,7 @@ $(document).ready(()=>{
             'telefono': $(".telefono_input").val(),
             'correo': $(".correo_input").val(),
         }
-        url = '/intec/back/agregar_tarea.php'
+        url = '/intec/back/agregar.php'
         console.log(data)
         $.post(url, data,(response)=>{
             console.log(response)
