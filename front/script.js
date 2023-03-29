@@ -4,7 +4,7 @@ $(document).ready(()=>{
     $(".empresa_form").submit((e)=>{
         e.preventDefault()
         const data = {
-            'cc_or_nit': $(".cc").val(),
+            'CC_NIT': $(".cc").val(),
             'nombre': $(".nombre_input").val(),
             'direccion':$(".direccion_input").val(),
             'telefono': $(".telefono_input").val(),
