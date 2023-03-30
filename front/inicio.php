@@ -5,11 +5,25 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <title>Intec-empresas</title>
+<style>
+    .dropdown-menu.show {
+        margin: 0;
+        box-shadow: none;
+    }
+
+    .dropdown-toggle::after {
+        display: none;
+    }
+
+    button:focus {
+    outline: none;
+}
+</style>
 </head>
 
 <body>
 
-    <div class="conteiner" style="background-color:lightgrey">
+    <div class="container-fluid" style="background-color:lightgrey; width: 100%">
         <div style="margin-left:10px;">
             <div class="row align-items-center" style="margin-left: 10px;">
                 <div class="col-md-9">
@@ -19,24 +33,61 @@
                         </div>
                         <div class="col-sm-9 col-md-10">
                             <div class="row" style="margin-top:40px;">
-                                <div style="width:100px; height:30px; margin-bottom:6px">
-                                    <h4 style="margin-right:30px;"><a style="padding:10px;" class="text-white bg-dark"
-                                            class="text-dark" href="inicio.php">Inicio</a></h4>
+                                <div class="col">
+                                    <div class="dropdown">
+                                        <button class="btn text-dark dropdown-toggle" type="button" id="tabla-menu"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            inicio
+                                        </button>
+                                    </div>
                                 </div>
-                                <h4 style="margin-right:30px;"><a class="text-dark" href="empresas.php">Empresas</a>
-                                </h4>
-                                <div style="margin-bottom:15px; width:100%;">
-                                    <ul class="dropdown-menu bg-dark" role="menu">
-                                        <li><a class="text-white" style="margin-left: 10px;" href="#">Marcas</a></li>
-                                        <li><a class="text-white" style="margin-left: 10px;" href="#">Capacidad</a></li>
-                                        <li><a class="text-white" style="margin-left: 10px;" href="#">Tipo</a></li>
-                                    </ul>
+                                <div class="col">
+                                    <div class="dropdown">
+                                        <button class="btn text-dark dropdown-toggle" type="button" id="tabla-menu"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            onclick="location.href='./empresas.php';">
+                                            empresas
+                                        </button>
+                                    </div>
                                 </div>
-                                <h4 style="margin-right:30px;"><a class="text-dark" href="log.php">Log</a></h4>
-                                <h4 style="margin-right:30px;"><a class="text-dark" href="rutinas.php">Rutinas</a></h4>
-                                <h4 style="margin-right:30px;"><a class="text-dark"
-                                        href="../back/cerrar-sesion.php">Cerrar
-                                        sesión</a></h4>
+                                <div class="col">
+                                    <div class="dropdown">
+                                        <button class="btn text-dark dropdown-toggle" type="button" id="tabla-menu"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Tabla
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="tabla-menu">
+                                            <a class="dropdown-item" href="#">Tabla 1</a>
+                                            <a class="dropdown-item" href="#">Tabla 2</a>
+                                            <a class="dropdown-item" href="#">Tabla 3</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="dropdown">
+                                        <button class="btn text-dark dropdown-toggle" type="button" id="tabla-menu"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            log
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="dropdown">
+                                        <button class="btn text-dark dropdown-toggle" type="button" id="tabla-menu"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            rutinas
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="dropdown">
+                                        <button class="btn text-dark dropdown-toggle" type="button" id="tabla-menu"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            onclick="location.href='/intec/back/cerrar-sesion.php';">
+                                            Cerrar sesion
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -49,7 +100,8 @@
     </div>
     <br>
 </body>
-<footer class="text-center" style="background-color:lightgrey">Soluciones Navarro @Todos los derechos reservados
+<footer class="text-center" style="background-color:lightgrey; position: fixed; bottom: 0; width: 100%;">Soluciones
+    Navarro @Todos los derechos reservados
 </footer>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
