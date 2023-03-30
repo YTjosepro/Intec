@@ -12,7 +12,7 @@
        $json[] = array(
         'ID' => $row['ID'],
         'CC_NIT' => $row['CC/NIT'],
-        'nombtre' => $row['nombre'],
+        'nombre' => $row['nombre'],
         'direccion' => $row['direccion'],
         'telefono' => $row['telefono'],
         'correo' => $row['correo    ']

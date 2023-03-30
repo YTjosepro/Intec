@@ -116,9 +116,10 @@
                             <td>DIRECCION</td>
                             <td>TELEFONO</td>
                             <td>CORREO</td>
+                            
                         </tr>
                     </thead>
-                    <tbody id="tasks"></tbody>
+                    <tbody id="empresas"></tbody>
                 </table>
                 <nav aria-label="Page navigation">
                     <ul class="pagination">
@@ -130,22 +131,22 @@
                         </li>
                         <li class="page-item active">
 
-                            <!-- fin de la tabla empresas -->
-                            <br>
-                            <br>
-                            <hr>
-                            <div>
-                                <form class="empresa_form">
-                                    <input type="text" class="cc" placeholder="CC/NIT">
-                                    <input type="text" name="" class="nombre_input" placeholder="Nombre">
-                                    <input type="text" name="" class="direccion_input" placeholder="Dirección">
-                                    <input type="text" name="" class="telefono_input" placeholder="Teléfono">
-                                    <input type="text" name="" class="correo_input" placeholder="Correo electrónico">
-                                    <button type="submit">
-                                        Enviar
-                                    </button>
-                                </form>
-                            </div>
+    <!-- fin de la tabla empresas -->
+                        <br>
+                        <br>
+                        <hr>
+                        <div>
+                            <form class="empresa_form">
+                                <input type="text" class="cc" placeholder="CC/NIT">
+                                <input type="text" name="" class="nombre_input" placeholder="Nombre">
+                                <input type="text" name="" class="direccion_input" placeholder="Dirección">
+                                <input type="text" name="" class="telefono_input" placeholder="Teléfono">
+                                <input type="text" name="" class="correo_input" placeholder="Correo electrónico">
+                                <button type="submit">
+                                    Enviar
+                                </button>
+                            </form>
+                        </div>
 
 </body>
 <footer class="text-center fixed-bottom"
