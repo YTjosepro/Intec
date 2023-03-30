@@ -1,0 +1,15 @@
+.header{
+    background-color:lightgrey !important; width: 100% !important;
+}
+
+.logo{
+    height:100px; margin-left:20px; margin-top:5px !important;
+}
+
+.divmargin{
+    margin-top:40px !important;
+}
+
+.nombre{
+    padding:10px; margin-left: 10px !important;
+}
