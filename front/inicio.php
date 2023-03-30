@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
 <title>Intec-empresas</title>
 <style>
     .dropdown-menu.show {
@@ -16,27 +17,28 @@
     }
 
     button:focus {
-    outline: none;
-}
+        outline: none;
+    }
 </style>
 </head>
 
 <body>
 
-    <div class="container-fluid" style="background-color:lightgrey; width: 100%">
-        <div style="margin-left:10px;">
-            <div class="row align-items-center" style="margin-left: 10px;">
+    <div class="container-fluid header">
+        <div>
+            <div class="row align-items-center">
                 <div class="col-md-9">
                     <div class="row justify-content-center">
                         <div class="col-12 col-sm-3 col-md-2">
-                            <img src="../fotos/logo.png" style="height:100px; margin-left:20px; margin-top:5px;">
+                            <img src="../fotos/logo.png" class="logo">
                         </div>
                         <div class="col-sm-9 col-md-10">
-                            <div class="row" style="margin-top:40px;">
+                            <div class="row divmargin">
                                 <div class="col">
                                     <div class="dropdown">
                                         <button class="btn text-dark dropdown-toggle" type="button" id="tabla-menu"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            onclick="location.href='/intec/front/inicio.php';">
                                             inicio
                                         </button>
                                     </div>
@@ -66,7 +68,8 @@
                                 <div class="col">
                                     <div class="dropdown">
                                         <button class="btn text-dark dropdown-toggle" type="button" id="tabla-menu"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            onclick="location.href='/intec/front/log.php';">
                                             log
                                         </button>
                                     </div>
@@ -74,7 +77,8 @@
                                 <div class="col">
                                     <div class="dropdown">
                                         <button class="btn text-dark dropdown-toggle" type="button" id="tabla-menu"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            onclick="location.href='/intec/front/rutinas.php';">
                                             rutinas
                                         </button>
                                     </div>
@@ -93,12 +97,11 @@
                     </div>
                 </div>
                 <div class="col-md-3 d-flex align-items-center justify-content-end ">
-                    <h4 class="text-white bg-dark" style="padding:10px; margin-left: 10px;">IntecSoftware</h4>
+                    <h4 class="text-white bg-dark nombre">IntecSoftware</h4>
                 </div>
             </div>
         </div>
     </div>
-    <br>
 </body>
 <footer class="text-center" style="background-color:lightgrey; position: fixed; bottom: 0; width: 100%;">Soluciones
     Navarro @Todos los derechos reservados
