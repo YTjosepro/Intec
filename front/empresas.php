@@ -13,33 +13,39 @@
     <!--Encabezado-->
 
     <div class="conteiner" style="background-color:lightgrey">
-        <div class="row">
-            <div class="col-2 col-md-3 col-sm-3">
-                <img src="../fotos/logo.png" style="height:100px; margin-left:20px; margin-top:5px;">
-            </div>
-            <div class="col-10 col-md-9 col-sm-6">
-                <div class="row" style="margin-top:40px;">
-                    <h4 style="margin-right:30px;"><a class="text-dark" href="inicio.php">Inicio</a></h4>
-                    <div style="width:160px; height:30px;">
-                        <h4 style="margin-right:30px;"><a style="padding:10px;" class="text-white bg-dark"
-                                href="empresas.php">Empresas</a></h4>
+        <div style="margin-left:10px;">
+            <div class="row align-items-center" style="margin-left: 10px;">
+                <div class="col-md-9">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-sm-3 col-md-2">
+                            <img src="../fotos/logo.png" style="height:100px; margin-left:20px; margin-top:5px;">
+                        </div>
+                        <div class="col-sm-9 col-md-10">
+                            <div class="row" style="margin-top:40px;">
+                                <div style="width:100px; height:30px; margin-bottom:6px">
+                                    <h4 style="margin-right:30px;"><a style="padding:10px;" class="text-white bg-dark"
+                                            class="text-dark" href="inicio.php">Inicio</a></h4>
+                                </div>
+                                <h4 style="margin-right:30px;"><a class="text-dark" href="empresas.php">Empresas</a>
+                                </h4>
+                                <div style="margin-bottom:15px; width:100%;">
+                                    <ul class="dropdown-menu bg-dark" role="menu">
+                                        <li><a class="text-white" style="margin-left: 10px;" href="#">Marcas</a></li>
+                                        <li><a class="text-white" style="margin-left: 10px;" href="#">Capacidad</a></li>
+                                        <li><a class="text-white" style="margin-left: 10px;" href="#">Tipo</a></li>
+                                    </ul>
+                                </div>
+                                <h4 style="margin-right:30px;"><a class="text-dark" href="log.php">Log</a></h4>
+                                <h4 style="margin-right:30px;"><a class="text-dark" href="rutinas.php">Rutinas</a></h4>
+                                <h4 style="margin-right:30px;"><a class="text-dark"
+                                        href="../back/cerrar-sesion.php">Cerrar
+                                        sesión</a></h4>
+                            </div>
+                        </div>
                     </div>
-                    <button type="button" class="btn btn-default dropdown-toggle margin-bottom:10px;"
-                        data-toggle="dropdown">
-                        <h4 style="margin-right:10px; margin-bottom:10px;">Tablas</h4><span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu bg-dark" role="menu">
-                        <li><a class="text-white" style="margin-left: 10px;" href="#">Marcas</a></li>
-                        <li><a class="text-white" style="margin-left: 10px;" href="#">Capacidad</a></li>
-                        <li><a class="text-white" style="margin-left: 10px;" href="#">Tipo</a></li>
-                    </ul>
-                    <h4 style="margin-right:30px;"><a class="text-dark" href="log.php">Log</a></h4>
-                    <h4 style="margin-right:30px;"><a class="text-dark" href="rutinas.php">Rutinas</a></h4>
-                    <h4 style="margin-right:30px;"><a class="text-dark" href="../back/cerrar-sesion.php">Cerrar
-                            sesión</a></h4>
-                    <div style="width:160px; height:30px;">
-                        <h4 class="text-white bg-dark" style="padding:10px;">IntecSofware</h4>
-                    </div>
+                </div>
+                <div class="col-md-3 d-flex align-items-center justify-content-end ">
+                    <h4 class="text-white bg-dark" style="padding:10px; margin-left: 10px;">IntecSoftware</h4>
                 </div>
             </div>
         </div>
