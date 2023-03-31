@@ -1,8 +1,8 @@
-    <!-- conexcion base de datos  -->
+
 
 <?php
 
-$coneccion = mysqli_connect(
+$conexion = mysqli_connect(
     'localhost',
     'root',
     '',

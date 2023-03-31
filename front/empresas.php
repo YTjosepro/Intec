@@ -1,7 +1,8 @@
 <?php
     include ('../back/seguridad.php');
 ?>
-<!DOCTYPE html <html lang="en" <head>
+<!DOCTYPE html <html lang="en">
+<head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -110,7 +111,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <table class="table table-striped table-bordered" style="width:100%">
+                <table class="table table-striped table-bordered" style="width:100%" id="lista">
                     <thead>
                         <tr>
                             <td>ID</td>
@@ -124,15 +125,6 @@
                     </thead>
                     <tbody id="empresas"></tbody>
                 </table>
-                <nav aria-label="Page navigation">
-                    <ul class="pagination">
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Anterior">
-                                <span aria-hidden="true">&laquo;</span>
-                                <span class="sr-only">Anterior</span>
-                            </a>
-                        </li>
-                        <li class="page-item active">
 
     <!-- fin de la tabla empresas -->
                         <br>
@@ -140,11 +132,11 @@
                         <hr>
                         <div>
                             <form class="empresa_form">
-                                <input type="text" class="cc" placeholder="CC/NIT">
-                                <input type="text" name="" class="nombre_input" placeholder="Nombre">
-                                <input type="text" name="" class="direccion_input" placeholder="Dirección">
-                                <input type="text" name="" class="telefono_input" placeholder="Teléfono">
-                                <input type="text" name="" class="correo_input" placeholder="Correo electrónico">
+                                <input type="hidden" id="empresa-id">
+                                <input type="text" id="cc" placeholder="CC/NIT">
+                                <input type="text" id="nombre_input" placeholder="Nombre">
+                                <input type="text" id="direccion_input" placeholder="Dirección">
+                                <input type="text" id="telefono_input" placeholder="Teléfono">
                                 <button type="submit">
                                     Enviar
                                 </button>
@@ -167,8 +159,7 @@
     crossorigin="anonymous"></script>
 
 </html>
-<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
-    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="crossorigin="anonymous"></script>
 <script src="script.js"></script>
 
 </html>
