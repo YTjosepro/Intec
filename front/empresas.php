@@ -1,4 +1,5 @@
-<!DOCTYPE html <html lang="en" <head>
+<!DOCTYPE html <html lang="en">
+<head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,8 +7,6 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 <title>Intec-empresas</title>
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
-<link rel="stylesheet" href="../librerias/datatables.min.css">
 <style>
     .dropdown-menu.show {
         margin: 0;
@@ -130,11 +129,11 @@
                         <hr>
                         <div>
                             <form class="empresa_form">
-                                <input type="text" class="cc" placeholder="CC/NIT">
-                                <input type="text" name="" class="nombre_input" placeholder="Nombre">
-                                <input type="text" name="" class="direccion_input" placeholder="Dirección">
-                                <input type="text" name="" class="telefono_input" placeholder="Teléfono">
-                                <input type="text" name="" class="correo_input" placeholder="Correo electrónico">
+                                <input type="hidden" id="empresa-id">
+                                <input type="text" id="cc" placeholder="CC/NIT">
+                                <input type="text" id="nombre_input" placeholder="Nombre">
+                                <input type="text" id="direccion_input" placeholder="Dirección">
+                                <input type="text" id="telefono_input" placeholder="Teléfono">
                                 <button type="submit">
                                     Enviar
                                 </button>
@@ -158,8 +157,6 @@
 
 </html>
 <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.13.4/datatables.min.js"></script>
 <script src="script.js"></script>
-<script src="../librerias/datatables.min.js"></script>
 
 </html>

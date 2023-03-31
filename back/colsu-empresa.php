@@ -1,9 +1,7 @@
 <?php
-
     include('conexion.php');
     $query = "SELECT * from empresas";
     $result = mysqli_query($conexion, $query);
-
     if(!$result) {
         die('Query Failed' . mysqli_error($conexion));
     }
@@ -19,5 +17,5 @@
        );
     }
     $jsonstring = json_encode($json);
-    echo $jsonstring
+    echo $jsonstring;
 ?>

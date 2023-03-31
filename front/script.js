@@ -2,11 +2,25 @@ console.log('Get Ready')
 
 
 $(document).ready(()=>{
-    $.extend(true, $.fn.dataTable.defaults, {
-        searching: false,
-    });
     buscar_empresa()
     console.log('Jquery is also ready')
+
+    $(document).on('click', '.empresa-item', function () {
+        let element = $(this)[0].parentElement.parentElement;
+        let id = $(element).attr('empresaID');
+        console.log(element, id)
+        $.post('../back/editar-empresas.php', {id}, function (response){
+            const empresa = JSON.parse(response)
+            $('#cc').val(empresa.cc);
+            $('#nombre_input').val(empresa.nombre);
+            $('#telefono_input ').val(empresa.telefono);
+            $('#correo_input').val(empresa.correo);
+            $('#direccion_input').val(empresa.ireccion);
+            $('#empresa-i').val(empresa.id);
+            edit = true;
+            
+        })
+    })
     
     $(".empresa_form").submit((e)=>{
 
@@ -34,17 +48,11 @@ $(document).ready(()=>{
         // console.log('Formulario enviado');
         
     })
-    function buscar_empresa(pagina){
-        var resultados_por_pagina = 10;
-        var offset = (pagina - 1) * resultados_por_pagina;
+    function buscar_empresa(){}
         $('.td-hide').hide();
         $.ajax({
             type: "GET",
             url: "../back/colsu-empresa.php",
-            data: {
-                resultados_por_pagina: resultados_por_pagina,
-                offset: offset
-            },
             success: function (response) {
                 let empresas = JSON.parse(response)
                 let fila = "";
@@ -73,8 +81,9 @@ $(document).ready(()=>{
                 $('#paginacion').html(html);
             }
         });
-    }
+    })
+    // $()
 
 
-})
+
 
