@@ -16,7 +16,8 @@ $(document).ready(()=>{
             $('#telefono_input ').val(empresa.telefono);
             $('#correo_input').val(empresa.correo);
             $('#direccion_input').val(empresa.ireccion);
-            $('#empresa-i').val(empresa.id);
+            $('#empresa-input').val(empresa.id);
+            buscar_empresa()
             edit = true;
             
         })
@@ -24,7 +25,6 @@ $(document).ready(()=>{
     
     $(".empresa_form").submit((e)=>{
 
-        e.preventDefault()
         const data = {
             'CC_NIT': $(".cc").val(),
             'nombre': $(".nombre_input").val(),
@@ -65,9 +65,7 @@ $(document).ready(()=>{
                             ${empresas.CC_NIT}
                             </a>
                         </td>
-                        <td>
-                        ${empresas.nombre}
-                        </td>
+                        <td>${empresas.nombre}</td>
                         <td>${empresas.direccion}</td>
                         <td>${empresas.telefono}</td>
                         <td>${empresas.correo}</td>

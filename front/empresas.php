@@ -132,12 +132,13 @@
                         <hr>
                         <div>
                             <form class="empresa_form">
-                                <input type="hidden" id="empresa-id">
-                                <input type="text" id="cc" placeholder="CC/NIT">
-                                <input type="text" id="nombre_input" placeholder="Nombre">
-                                <input type="text" id="direccion_input" placeholder="Dirección">
-                                <input type="text" id="telefono_input" placeholder="Teléfono">
-                                <button type="submit">
+                                <input type="hidden" id="empresa-id" class="empresa-id">
+                                <input type="text" id="cc" class="cc" placeholder="CC/NIT">
+                                <input type="text" id="nombre_input" class="nombre_input" placeholder="Nombre">
+                                <input type="text" id="direccion_input" class="direccion_input" placeholder="Dirección">
+                                <input type="text" id="telefono_input" class="telefono_input" placeholder="Teléfono">
+                                <input type="text" id="correo_input" class="correo_input" placeholder="Correo">
+                                <button type="submit" >
                                     Enviar
                                 </button>
                             </form>
