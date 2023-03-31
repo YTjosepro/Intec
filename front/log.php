@@ -58,16 +58,16 @@
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Tabla
                                         </button>
-                                        <div class="dropdown-menu" aria-labelledby="tabla-menu">
-                                            <a class="dropdown-item" href="#">Tabla 1</a>
-                                            <a class="dropdown-item" href="#">Tabla 2</a>
-                                            <a class="dropdown-item" href="#">Tabla 3</a>
+                                        <div class="dropdown-menu text-white bg-dark" aria-labelledby="tabla-menu">
+                                            <a class="dropdown-item text-white bg-dark" href="#">Tabla 1</a>
+                                            <a class="dropdown-item text-white bg-dark" href="#">Tabla 2</a>
+                                            <a class="dropdown-item text-white bg-dark" href="#">Tabla 3</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="dropdown">
-                                        <button class="btn text-dark dropdown-toggle" type="button" id="tabla-menu"
+                                        <button class="btn text-white bg-dark dropdown-toggle" type="button" id="tabla-menu"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                                             onclick="location.href='/intec/front/log.php';">
                                             log
