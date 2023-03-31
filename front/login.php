@@ -1,6 +1,6 @@
-    <?php
+<?php
     session_start();
-    if(isset($usu)) {
+    if(isset($_SESSION['nombre'])) {
         header('Location: inicio.php');
     }
 ?>
@@ -35,14 +35,14 @@
                             <img src="../fotos/logo.png" class="img-fluid mb-3" style="margin-top:15px; height:225px;">
                             <h3>IntecSofware</h3>
                             <h7>Software de control técnico<br>Administrativo</h7>
-                            <form method="POST" action="inicio.php">
+                            <form method="POST" action="../back/loginproceso.php">
                                 <div class="form-group mt-4">
                                     <label for="usuario">Usuario</label>
-                                    <input type="text" class="form-control" id="usuario" placeholder="name@domain.com">
+                                    <input type="text" class="form-control" name="txtUsu" id="usuario" placeholder="name@domain.com">
                                 </div>
                                 <div class="form-group">
                                     <label for="contrasena">Contraseña</label>
-                                    <input type="password" class="form-control" id="contrasena" name="txtpass"
+                                    <input type="password" class="form-control" id="contrasena" name="txtPass"
                                     placeholder="******">
                                 </div>
                                 <div>

@@ -1,3 +1,6 @@
+<?php
+    include ('../back/seguridad.php');
+?>
 <!DOCTYPE html <html lang="en" <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,11 +37,11 @@
                         </div>
                         <div class="col-sm-9 col-md-10">
                             <div class="row divmargin">
-                                <div class="col">
+                                <div class="col" style='border: 1px solid red;'>
                                     <div class="dropdown">
                                         <button class="btn text-white bg-dark dropdown-toggle" type="button" id="tabla-menu"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                            onclick="location.href='/intec/front/inicio.php';">
+                                            onclick="location.href='/intec/front/inicio.php';" style="width:100%">
                                             inicio
                                         </button>
                                     </div>
@@ -97,7 +100,7 @@
                     </div>
                 </div>
                 <div class="col-md-3 d-flex align-items-center justify-content-end ">
-                    <h4 class="text-white bg-dark nombre">IntecSoftware</h4>
+                    <h4 class="text-white bg-dark nombre" style="border-radius:5px;">IntecSoftware</h4>
                 </div>
             </div>
         </div>
