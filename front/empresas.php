@@ -6,6 +6,8 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 <title>Intec-empresas</title>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="../librerias/datatables.min.css">
 <style>
     .dropdown-menu.show {
         margin: 0;
@@ -107,7 +109,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <table class="table table-striped table-bordered" style="width:100%">
+                <table class="table table-striped table-bordered" style="width:100%" id="lista">
                     <thead>
                         <tr>
                             <td>ID</td>
@@ -121,15 +123,6 @@
                     </thead>
                     <tbody id="empresas"></tbody>
                 </table>
-                <nav aria-label="Page navigation">
-                    <ul class="pagination">
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Anterior">
-                                <span aria-hidden="true">&laquo;</span>
-                                <span class="sr-only">Anterior</span>
-                            </a>
-                        </li>
-                        <li class="page-item active">
 
     <!-- fin de la tabla empresas -->
                         <br>
@@ -164,8 +157,9 @@
     crossorigin="anonymous"></script>
 
 </html>
-<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
-    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.13.4/datatables.min.js"></script>
 <script src="script.js"></script>
+<script src="../librerias/datatables.min.js"></script>
 
 </html>

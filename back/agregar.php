@@ -10,7 +10,7 @@
         
         // Validar que no existe un registro con el mismo CC_NIT
         $query_validacion = "SELECT * FROM empresas WHERE CC_NIT = '$CC_NIT'";
-        $result_validacion = mysqli_query($coneccion, $query_validacion);
+        $result_validacion = mysqli_query($conexion, $query_validacion);
         if(mysqli_num_rows($result_validacion) > 0) {
             // Ya existe un registro con ese CC_NIT, no se puede insertar
             $respuesta = 'Ya existe una empresa con ese CC_NIT';
@@ -20,7 +20,7 @@
         
         // Si no hay registro con el mismo CC_NIT, se puede insertar
         $query = "INSERT into empresas (CC_NIT, nombre, direccion, telefono, correo) VALUES ('$CC_NIT', '$nombre', '$direccion', '$telefono', '$correo')";
-        $result = mysqli_query($coneccion, $query);
+        $result = mysqli_query($conexion, $query);
         if(!$result) {
             die('Query Failed');
         }

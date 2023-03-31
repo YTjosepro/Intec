@@ -2,38 +2,14 @@ console.log('Get Ready')
 
 
 $(document).ready(()=>{
+    $.extend(true, $.fn.dataTable.defaults, {
+        searching: false,
+    });
+    buscar_empresa()
     console.log('Jquery is also ready')
-    function buscar_empresa(){
-        $('#lista').DataTable();
-        $('.td-hide').hide();
-        $.ajax({
-            type: "GET",
-            url: "../back/empresas_list.php",
-            data: "data",
-            success: function (response) {
-                console.log(response)
-                let empresas = JSON.parse(response)
-                let template = "";
-                empresas.forEach(empresas =>{
-                    template += `
-                    <tr taskID="${empresas.id}"
-                        <td class="td-hide d-none">${empresas.id}</td>
-                        <td>
-                            <a href="#" class="empresa-item">
-                            ${empresas.nombre}
-                            </a>
-                        </td>
-                        <td>${empresas.cc_nit}</td>
-                        <td>${empresas.direccion}</td>
-                        <td>${empresas.correo}</td>
-                    `
-                })
-            }
-        });
-    }
     
     $(".empresa_form").submit((e)=>{
-        
+
         e.preventDefault()
         const data = {
             'CC_NIT': $(".cc").val(),
@@ -58,5 +34,47 @@ $(document).ready(()=>{
         // console.log('Formulario enviado');
         
     })
+    function buscar_empresa(pagina){
+        var resultados_por_pagina = 10;
+        var offset = (pagina - 1) * resultados_por_pagina;
+        $('.td-hide').hide();
+        $.ajax({
+            type: "GET",
+            url: "../back/colsu-empresa.php",
+            data: {
+                resultados_por_pagina: resultados_por_pagina,
+                offset: offset
+            },
+            success: function (response) {
+                let empresas = JSON.parse(response)
+                let fila = "";
+                empresas.forEach(empresas =>{
+                    fila = `
+                    <tr empresaID="${empresas.ID}"
+                        <td class="td-hide d-none">${empresas.ID}</td>
+                        <td>
+                            <a href="#" class="empresa-item">
+                            ${empresas.CC_NIT}
+                            </a>
+                        </td>
+                        <td>
+                        ${empresas.nombre}
+                        </td>
+                        <td>${empresas.direccion}</td>
+                        <td>${empresas.telefono}</td>
+                        <td>${empresas.correo}</td>
+                    </tr>
+                    `
+                    var btn = document.createElement("TR");
+                    btn.innerHTML=fila;
+                    document.getElementById("empresas").appendChild(btn);	
+                })
+                
+                $('#paginacion').html(html);
+            }
+        });
+    }
+
 
 })
+
