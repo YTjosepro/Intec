@@ -60,11 +60,7 @@ $(document).ready(()=>{
                     fila = `
                     <tr empresaID="${empresas.ID}"
                         <td class="td-hide d-none">${empresas.ID}</td>
-                        <td>
-                            <a href="#" class="empresa-item">
-                            ${empresas.CC_NIT}
-                            </a>
-                        </td>
+                        <td>${empresas.CC_NIT}</td>
                         <td>${empresas.nombre}</td>
                         <td>${empresas.direccion}</td>
                         <td>${empresas.telefono}</td>
