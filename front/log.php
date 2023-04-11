@@ -39,9 +39,9 @@
                             <div class="row divmargin">
                                 <div class="col">
                                     <div class="dropdown">
-                                        <button class="btn text-white bg-dark dropdown-toggle" type="button" id="tabla-menu"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 18px;"
-                                            onclick="location.href='/aires/front/index.php';" style="width:100%">
+                                        <button class="btn text-dark dropdown-toggle" type="button" id="tabla-menu"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            onclick="location.href='/aires/front/index.php';" style="font-size: 18px;">
                                             inicio
                                         </button>
                                     </div>
@@ -71,7 +71,7 @@
                                 </div>
                                 <div class="col">
                                     <div class="dropdown">
-                                        <button class="btn text-dark dropdown-toggle" type="button" id="tabla-menu"
+                                        <button class="btn text-white bg-dark dropdown-toggle" type="button" id="tabla-menu"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                                             onclick="location.href='/aires/front/log.php';" style="font-size: 18px;">
                                             log
@@ -101,7 +101,7 @@
                     </div>
                 </div>
                 <div class="col-md-3 d-flex align-items-center justify-content-end ">
-                    <h4 class="text-white bg-dark nombre" style="border-radius:5px;">airesSoftware</h4>
+                    <h4 class="text-white bg-dark nombre">airesSoftware</h4>
                 </div>
             </div>
         </div>
@@ -119,5 +119,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-
-</html> 
+</html>
