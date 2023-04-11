@@ -2,77 +2,77 @@ console.log('Get Ready')
 
 
 $(document).ready(()=>{
-    buscar_empresa()
+    buscar_empresas()
     console.log('Jquery is also ready')
 
-    $(document).on('click', '.empresa-item', function () {
+    $(document).on('click', '.empresas-item', function () {
         let element = $(this)[0].parentElement.parentElement;
-        let id = $(element).attr('empresaID');
-        console.log(element, id)
-        $.post('../back/editar-empresas.php', {id}, function (response){
-            const empresa = JSON.parse(response)
-            $('#cc').val(empresa.cc);
-            $('#nombre_input').val(empresa.nombre);
-            $('#telefono_input ').val(empresa.telefono);
-            $('#correo_input').val(empresa.correo);
-            $('#direccion_input').val(empresa.ireccion);
-            $('#empresa-input').val(empresa.id);
-            buscar_empresa()
+        let idempresas = $(element).attr('empresasidempresas');
+        console.log(element, idempresas)
+        $.post('../back/editarproceso.php', {idempresas}, function (response){
+            const empresas = JSON.parse(response)
+            $('#nit').val(empresas.nit);
+            $('#nombre_input').val(empresas.nombre);
+            $('#telefono_input ').val(empresas.telefono);
+            $('#correo_input').val(empresas.correo);
+            $('#direccion_input').val(empresas.direccion);
+            $('#empresas-input').val(empresas.idempresas);
+            buscar_empresas()
             edit = true;
             
         })
     })
     
-    $(".empresa_form").submit((e)=>{
-
+    $(".empresas_form").submit((e)=>{
+        console.log("enviado")
         const data = {
-            'CC_NIT': $(".cc").val(),
-            'nombre': $(".nombre_input").val(),
-            'direccion':$(".direccion_input").val(),
-            'telefono': $(".telefono_input").val(),
-            'correo': $(".correo_input").val(),
+            'nit':    $(".nit").val(),
+            'nombre':    $(".nombre_input").val(),
+            'telefono':  $(".telefono_input").val(),
+            'correo':    $(".correo_input").val(),
+            'direccion':    $(".direccion_input").val(),
         }
-        url = '/intec/back/agregar.php'
+        url = '/aires/back/agregar.php'
         console.log(data)
         $.post(url, data,(response)=>{
             console.log(response)
-            buscar_empresa()
+            buscar_empresas()
         })
     
 
-        // console.log($(".cc").val())
+        // console.log($(".nit").val())
         // console.log($(".nombre_input").val())
-        // console.log($(".direccion_input").val())
         // console.log($(".telefono_input").val())
         // console.log($(".correo_input").val())
+        // console.log($(".direccion_input").val())
         // console.log('Formulario enviado');
         
     })
-    function buscar_empresa(){}
-        $('.td-hide').hide();
+    function buscar_empresas(){}
+        $('.td-hidempresase').hidempresase();
         $.ajax({
             type: "GET",
-            url: "../back/colsu-empresa.php",
+            url: "../back/colsu-empresas.php",
             success: function (response) {
                 let empresas = JSON.parse(response)
                 let fila = "";
                 empresas.forEach(empresas =>{
                     fila = `
-                    <tr empresaID="${empresas.ID}"
-                        <td class="td-hide d-none">${empresas.ID}</td>
+                    <tr empresasidempresas="${empresas.idempresas}"
+                        <td>${empresas.ID}</td>
                         <td>${empresas.CC_NIT}</td>
                         <td>${empresas.nombre}</td>
-                        <td>${empresas.direccion}</td>
                         <td>${empresas.telefono}</td>
                         <td>${empresas.correo}</td>
+                        <td><a href='../back/editarproceso.php?idempresas=${empresas.idempresas}'>EDITAR<a></td>
+                        <td><a href='../back/eliminaremp.php?idempresas=${empresas.idempresas}'>ELIMINAR<a></td>
                     </tr>
                     `
                     var btn = document.createElement("TR");
                     btn.innerHTML=fila;
-                    document.getElementById("empresas").appendChild(btn);	
+                    document.getElementByid("empresass").appendChild(btn);	
                 })
                 
-                $('#paginacion').html(html);
             }
         });
     })
@@ -80,4 +80,24 @@ $(document).ready(()=>{
 
 
 
+// incio ventana modal en empresas
 
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("mybtn");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+// fin ventana modal en empresas

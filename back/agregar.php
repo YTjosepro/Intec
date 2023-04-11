@@ -1,5 +1,5 @@
 <?php
-    include('conexion.php');
+    include('baseDeDatos.php');
 
     if(isset($_POST['nombre'])){
         $CC_NIT= $_POST['CC_NIT'];
@@ -29,3 +29,7 @@
         echo $respuesta;
     }
 ?>
+
+
+
+3204867403

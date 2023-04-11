@@ -1,13 +1,12 @@
 <?php
-    session_start();
-    if(isset($_SESSION['nombre'])) {
-        header('Location: inicio.php');
-    }
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
 ?>
 
 <!DOCTYPE html>
 <html>
-
+ 
 <head>
     <meta charset='utf-8'>
     <title>Iniciar sesión</title>
@@ -38,12 +37,13 @@
                             <form method="POST" action="../back/loginproceso.php">
                                 <div class="form-group mt-4">
                                     <label for="usuario">Usuario</label>
-                                    <input type="text" class="form-control" name="txtUsu" id="usuario" placeholder="name@domain.com">
+                                    <input type="text" class="form-control" name="usuario" id="usuario" 
+                                    placeholder="name@domain.com" required="required">
                                 </div>
                                 <div class="form-group">
-                                    <label for="contrasena">Contraseña</label>
-                                    <input type="password" class="form-control" id="contrasena" name="txtPass"
-                                    placeholder="******">
+                                    <label for="password">Contraseña</label>
+                                    <input type="password" class="form-control" id="password" name="password"
+                                    placeholder="******" required="required">
                                 </div>
                                 <div>
                                     <a href="tutoriales.php" class="btn btn-info mr-2">Tutoriales</a>

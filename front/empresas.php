@@ -9,8 +9,9 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="script.js">
     
-<title>Intec-empresas</title>
+<title>aires-empresas</title>
 <style>
     .dropdown-menu.show {
         margin: 0;
@@ -27,22 +28,26 @@
 </style>
 </head>
 
-<body>
+<body <?php
+if ($mostrar_modal) {
+  echo '<script>modal.style.display = "block";</script>';
+}
+?>>
     <div class="container-fluid header">
         <div>
             <div class="row align-items-center">
                 <div class="col-md-9">
                     <div class="row justify-content-center">
-                        <div class="col-12 col-sm-3 col-md-2">
+                        <div class="col-12 col-sm-5 col-md-4">
                             <img src="../fotos/logo.png" class="logo">
                         </div>
-                        <div class="col-sm-9 col-md-10">
+                        <div class="col-sm-7 col-md-8">
                             <div class="row divmargin">
                                 <div class="col">
                                     <div class="dropdown">
                                         <button class="btn text-dark dropdown-toggle" type="button" id="tabla-menu"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                            onclick="location.href='/intec/front/inicio.php';">
+                                            onclick="location.href='/aires/front/index.php';" style="font-size: 18px;">
                                             inicio
                                         </button>
                                     </div>
@@ -51,7 +56,7 @@
                                     <div class="dropdown">
                                         <button class="btn text-white bg-dark dropdown-toggle" type="button" id="tabla-menu"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                            onclick="location.href='./empresas.php';">
+                                            onclick="location.href='./empresas.php';" style="font-size: 18px;">
                                             empresas 
                                         </button>
                                     </div>
@@ -59,7 +64,8 @@
                                 <div class="col">
                                     <div class="dropdown">
                                         <button class="btn text-dark dropdown-toggle" type="button" id="tabla-menu"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            style="font-size: 18px;">
                                             Tabla
                                         </button>
                                         <div class="dropdown-menu text-white bg-dark" aria-labelledby="tabla-menu">
@@ -73,7 +79,7 @@
                                     <div class="dropdown">
                                         <button class="btn text-dark dropdown-toggle" type="button" id="tabla-menu"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                            onclick="location.href='/intec/front/log.php';">
+                                            onclick="location.href='/aires/front/log.php';" style="font-size: 18px;">
                                             log
                                         </button>
                                     </div>
@@ -82,7 +88,7 @@
                                     <div class="dropdown">
                                         <button class="btn text-dark dropdown-toggle" type="button" id="tabla-menu"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                            onclick="location.href='/intec/front/rutinas.php';">
+                                            onclick="location.href='/aires/front/rutinas.php';" style="font-size: 18px;">
                                             rutinas
                                         </button>
                                     </div>
@@ -91,7 +97,7 @@
                                     <div class="dropdown">
                                         <button class="btn text-dark dropdown-toggle" type="button" id="tabla-menu"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                            onclick="location.href='/intec/back/cerrar-sesion.php';">
+                                            onclick="cerrarSesion()" style="font-size: 18px;">
                                             Cerrar sesion
                                         </button>
                                     </div>
@@ -101,17 +107,49 @@
                     </div>
                 </div>
                 <div class="col-md-3 d-flex align-items-center justify-content-end ">
-                    <h4 class="text-white bg-dark nombre">IntecSoftware</h4>
+                    <h4 class="text-white bg-dark nombre" style="border-radius:5px;">airesSoftware</h4>
                 </div>
             </div>
         </div>
     </div>
     <br>
     <!-- inicio tabla empresas -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-10">
+                <h4>LISTA DE EMPRESAS</h4> 
+            </div>
+            <div class="col-2">
+                <button style="border-radius:3px; border: none;" class="header" id="mybtn">Agregar Empresa</button>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>
+                            <div id="inputs">
+                                <form class="empresa_form">
+                                    <center><h4>AGREGAR EMPRESA</h4></center>
+                                    <input type="hidden" style="border-radius:5px;"id="empresa-id " class="empresa-id">
+                                    <input type="text" style="border-radius:5px;"id="cc" class="cc " placeholder="CC/NIT">
+                                    <input type="text" style="border-radius:5px;"id="nombre_input" class="nombre_input " placeholder="Nombre">
+                                    <input type="text" style="border-radius:5px;"id="direccion_input" class="direccion_input " placeholder="Dirección">
+                                    <input type="text" style="border-radius:5px;"id="telefono_input" class="telefono_input " placeholder="Teléfono">
+                                    <input type="text" style="border-radius:5px;"id="correo_input" class="correo_input " placeholder="Correo">
+                                    <button type="submit" style="border-radius:5px;">Enviar</button>
+                                </form>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <table class="table table-striped table-bordered" style="width:100%" id="lista">
+                <table class="table table-striped table-red table-bordered" style="width:100%" id="lista">
                     <thead>
                         <tr>
                             <td>ID</td>
@@ -120,29 +158,20 @@
                             <td>DIRECCION</td>
                             <td>TELEFONO</td>
                             <td>CORREO</td>
-
+                            <Td>EDITAR</Td>
+                            <td>ELIMINAR</td>
+                            
                         </tr>
                     </thead>
                     <tbody id="empresas"></tbody>
                 </table>
 
     <!-- fin de la tabla empresas -->
-                        <br>
-                        <br>
-                        <hr>
-                        <div>
-                            <form class="empresa_form">
-                                <input type="hidden" id="empresa-id" class="empresa-id">
-                                <input type="text" id="cc" class="cc" placeholder="CC/NIT">
-                                <input type="text" id="nombre_input" class="nombre_input" placeholder="Nombre">
-                                <input type="text" id="direccion_input" class="direccion_input" placeholder="Dirección">
-                                <input type="text" id="telefono_input" class="telefono_input" placeholder="Teléfono">
-                                <input type="text" id="correo_input" class="correo_input" placeholder="Correo">
-                                <button type="submit" >
-                                    Enviar
-                                </button>
-                            </form>
-                        </div>
+    <br>
+
+
+
+        
 
 </body>
 <footer class="text-center fixed-bottom"

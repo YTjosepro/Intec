@@ -1,5 +1,6 @@
 <?php
     include ('../back/seguridad.php');
+
 ?>
 <!DOCTYPE html <html lang="en" <head>
 <meta charset="UTF-8">
@@ -8,7 +9,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-<title>Intec-empresas</title>
+<title>aires-empresas</title>
 <style>
     .dropdown-menu.show {
         margin: 0;
@@ -32,16 +33,16 @@
             <div class="row align-items-center">
                 <div class="col-md-9">
                     <div class="row justify-content-center">
-                        <div class="col-12 col-sm-3 col-md-2">
+                        <div class="col-12 col-sm-5 col-md-4">
                             <img src="../fotos/logo.png" class="logo">
                         </div>
-                        <div class="col-sm-9 col-md-10">
+                        <div class="col-sm-7 col-md-8">
                             <div class="row divmargin">
                                 <div class="col">
                                     <div class="dropdown">
                                         <button class="btn text-dark dropdown-toggle" type="button" id="tabla-menu"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                            onclick="location.href='/intec/front/inicio.php';">
+                                            onclick="location.href='/aires/front/index.php';" style="font-size: 18px;">
                                             inicio
                                         </button>
                                     </div>
@@ -50,7 +51,7 @@
                                     <div class="dropdown">
                                         <button class="btn text-dark dropdown-toggle" type="button" id="tabla-menu"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                            onclick="location.href='./empresas.php';">
+                                            onclick="location.href='./empresas.php';" style="font-size: 18px;">
                                             empresas
                                         </button>
                                     </div>
@@ -58,7 +59,8 @@
                                 <div class="col">
                                     <div class="dropdown">
                                         <button class="btn text-dark dropdown-toggle" type="button" id="tabla-menu"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" 
+                                            style="font-size: 18px;">
                                             Tabla
                                         </button>
                                         <div class="dropdown-menu text-white bg-dark" aria-labelledby="tabla-menu">
@@ -72,7 +74,7 @@
                                     <div class="dropdown">
                                         <button class="btn text-dark dropdown-toggle" type="button" id="tabla-menu"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                            onclick="location.href='/intec/front/log.php';">
+                                            onclick="location.href='/aires/front/log.php';" style="font-size: 18px;">
                                             log
                                         </button>
                                     </div>
@@ -81,7 +83,7 @@
                                     <div class="dropdown">
                                         <button class="btn text-white bg-dark dropdown-toggle" type="button" id="tabla-menu"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                            onclick="location.href='/intec/front/rutinas.php';">
+                                            onclick="location.href='/aires/front/rutinas.php';" style="font-size: 18px;">
                                             rutinas
                                         </button>
                                     </div>
@@ -90,7 +92,7 @@
                                     <div class="dropdown">
                                         <button class="btn text-dark dropdown-toggle" type="button" id="tabla-menu"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                            onclick="location.href='/intec/back/cerrar-sesion.php';">
+                                            onclick="location.href='/aires/back/cerrar-sesion.php';" style="font-size: 18px;">
                                             Cerrar sesion
                                         </button>
                                     </div>
@@ -100,7 +102,7 @@
                     </div>
                 </div>
                 <div class="col-md-3 d-flex align-items-center justify-content-end ">
-                    <h4 class="text-white bg-dark nombre">IntecSoftware</h4>
+                    <h4 class="text-white bg-dark nombre">airesSoftware</h4>
                 </div>
             </div>
         </div>
